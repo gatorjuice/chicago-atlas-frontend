@@ -97,7 +97,17 @@ function _buildRows(rows = []) {
   if (!rows.length) {
     return <tr><td className="c-table__cell">{'No Data'}</td></tr>;
   }
-  return rows.map((row, i) => {
+
+  const sortedRows = rows.sort((a, b) => {
+    const prevCategoryName = a.data[0];
+    const nextCategoryName = b.data[0];
+    return (
+      // Sort the rows by length first so things like 9th come before 10th and then by alphabetical order.
+      prevCategoryName.length - nextCategoryName.length || prevCategoryName.localeCompare(nextCategoryName)
+    );
+  });
+
+  return sortedRows.map((row, i) => {
     return (
       <tr key={i}>
         {_buildCells(row, row.flag)}
