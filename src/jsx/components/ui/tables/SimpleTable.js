@@ -10,6 +10,7 @@ import {
 } from '../../../constants/specialNames';
 
 import parser from '../../../utils/parsers';
+import tableUtilities from '../../../utils/tableUtilities';
 
 export default (props) => (
 
@@ -98,14 +99,7 @@ function _buildRows(rows = []) {
     return <tr><td className="c-table__cell">{'No Data'}</td></tr>;
   }
 
-  const sortedRows = rows.sort((a, b) => {
-    const prevCategoryName = a.data[0];
-    const nextCategoryName = b.data[0];
-    return (
-      // Sort the rows by length first so things like 9th come before 10th and then by alphabetical order.
-      prevCategoryName.length - nextCategoryName.length || prevCategoryName.localeCompare(nextCategoryName)
-    );
-  });
+  const sortedRows = tableUtilities.sortRowsByLengthAndName(rows);
 
   return sortedRows.map((row, i) => {
     return (
