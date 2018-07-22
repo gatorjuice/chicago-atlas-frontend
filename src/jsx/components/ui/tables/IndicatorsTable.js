@@ -51,12 +51,12 @@ function buildGroups(groups = [], props) {
 function _buildHeadings(headings = []) {
 
   if (!headings.length) {
-    return <th colSpan={colspan} className="c-table__cell c-table__cell--head u-fw--normal">{'No data'}</th>;
+    return <th colSpan={colspan} className="c-table__cell c-table__cell--head u-fw--normal u-font--serif">{'No data'}</th>;
   }
 
   return headings.map((heading, i) => {
     return (
-      <th className="c-table__cell c-table__cell--head" key={i}>
+      <th className="c-table__cell c-table__cell--head u-font--serif" key={i}>
         {heading}
       </th>
     );
@@ -66,14 +66,14 @@ function _buildHeadings(headings = []) {
 
 function buildRows(rows = [], props) {
   if (!rows.length) {
-    return <tr><td colSpan={colspan} className="c-table__cell">{'No Data'}</td></tr>;
+    return <tr><td colSpan={colspan} className="c-table__cell u-font--serif">{'No Data'}</td></tr>;
   }
 
   return rows.map((row, i) => {
     return (
       <tr key={i}>
         <td
-          className="c-table__cell u-fw--medium"
+          className="c-table__cell u-fw--medium u-font--serif"
           tabIndex="0"
           role="button"
           aria-label="Indicator details"
@@ -84,27 +84,27 @@ function buildRows(rows = [], props) {
           {row.indicator}
         </td>
         {
-          <td className="c-table__cell c-table__baseline">
+          <td className="c-table__cell c-table__baseline u-font--serif">
             {row.citywide_baseline}
           </td>
         }
         {
           row.priority_population &&
-          <td className="c-table__cell">
+          <td className="c-table__cell u-font--serif">
             {row.priority_population}
           </td>
         }
         {
-          <td className="c-table__cell c-table__baseline">
+          <td className="c-table__cell c-table__baseline u-font--serif">
             {row.priority_baseline}
           </td>
         }
         {
-          <td className="c-table__cell c-table__baseline">
+          <td className="c-table__cell c-table__baseline u-font--serif">
             {row.target}
           </td>
         }
-        <td className="c-table__cell">
+        <td className="c-table__cell u-font--serif">
           {
             row.source &&
             <a href={row.source.datasource_url} target="_blank">{row.source.datasource}</a>
