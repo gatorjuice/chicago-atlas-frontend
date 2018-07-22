@@ -35,10 +35,10 @@ export function allTopics(topicsList) {
   };
 }
 
-export function partners(cache) {
+export function partners() {
   return {
     type: actionTypes.PARTNERS_DATA,
-    payload: fetchData('/data/about.json', cache)
+    payload: fetchData(`${API}partners/`)
   };
 }
 

@@ -8,7 +8,7 @@ const About = React.createClass({
   displayName: 'About',
 
   componentDidMount() {
-    this.props.fetchPartners(this.props.content);
+    this.props.fetchPartners();
   },
 
   render() {
@@ -174,10 +174,10 @@ function buildMediaCards(cards) {
           description={card.description}
           linkName={card.link_name}
           linkURL={card.link_url}
-          imgLocal={card.imgLocal}
-          imageUrl={card.imageUrl}
+          imgURL={card.img_src_url}
+          imageUrl={card.image_url}
           subtitle={card.subtitle}
-          imgAlt={card.imgAlt}
+          imgAlt={card.img_alt}
           invert={true}
         />
       </li>
@@ -193,7 +193,7 @@ const mapStateToProps = (store, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchPartners: (cache) => dispatch(fetch.partners(cache))
+    fetchPartners: () => dispatch(fetch.partners())
   };
 };
 
