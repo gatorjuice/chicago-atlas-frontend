@@ -24,9 +24,11 @@ export default (props) => (
 
     <div className="c-area-meta__links">
       {
-        props.data.geography.geo_type === 'Zip'
-        ? <p>Corresponding zip codes include:</p>
-        : <p>Corresponding community areas include:</p>
+        props.data.geography.geo_type === 'Zip' ? (
+          <p>Corresponding community areas include:</p>
+        ) : (
+          <p>Corresponding zip codes include:</p>
+        )
       }
       {renderAdjecentAreas(props.data)}
     </div>
