@@ -39,7 +39,7 @@ const About = React.createClass({
                 <div className="v-about__contact-us-box">
                   <h2 className="v-about__h2 u-font--serif">Contact Us</h2>
                   <p className="v-about__contact-us-p">
-                    We are always looking for ways to improve the Chicago Health Atlas. If you have feedback, questions or ideas, please email us at HealthyChicago2.0@cityofchicago.org.
+                    We are always looking for ways to improve the Chicago Health Atlas. If you have feedback, questions or ideas, please email us at <span><a href="mailto:HealthyChicago2.0@cityofchicago.org">HealthyChicago2.0@cityofchicago.org</a></span>.
                   </p>
                 </div>
 
