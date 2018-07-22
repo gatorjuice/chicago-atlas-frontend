@@ -1,4 +1,3 @@
-
 export const API = 'https://chicagohealth.herokuapp.com/api/v1/';
 
 export const MAPBOX_TOKEN = 'pk.eyJ1Ijoic21hcnRjaGljYWdvY29sbGFib3JhdGl2ZSIsImEiOiJjajFieWk4eW4wYXZpMndxcXI0bTVxd2l2In0.W5BO8RknpZGIEyzqXOSUxA';
