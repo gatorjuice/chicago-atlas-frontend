@@ -4,7 +4,7 @@ import { IndexLink } from 'react-router';
 import MainNavbar from './MainNavbar';
 import MainNavbarLinks from '../../../data/MainNavbar.json';
 
-const Logo = process.env.PUBLIC_URL + '/images/logo_partner_cdph.png';
+const Logo = process.env.PUBLIC_URL + '/images/cha-logo.png';
 
 export default (props) => (
 
